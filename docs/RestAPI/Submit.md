@@ -40,6 +40,8 @@ Second, the XML task needs encode as base64.
 ENCODED=$(cat <<'EOF' | base64
 <run>
 
+<regular>
+
 <chain>
     <in>P1</in>
     <out>P2</out>
@@ -49,6 +51,8 @@ ENCODED=$(cat <<'EOF' | base64
     <in>P2</in>
     <out>P1</out>
 </chain>
+
+</regular>
 
 </run>
 EOF
@@ -86,14 +90,16 @@ $ curl -k \
     base64 -d
 
 <run>
-    <chain>
-        <in>P1</in>
-        <out>P2</out>
-    </chain>
-    <chain>
-        <in>P2</in>
-        <out>P1</out>
-    </chain>
+    <regular>
+        <chain>
+            <in>P1</in>
+            <out>P2</out>
+        </chain>
+        <chain>
+            <in>P2</in>
+            <out>P1</out>
+        </chain>
+    </regular>
 </run>
 ```
 
@@ -122,6 +128,8 @@ curl -k \
 ENCODED=$(cat <<'EOF' | base64
 <run>
 
+<regular>
+
 <chain>
     <in>P1</in>
     <out>P2</out>
@@ -131,6 +139,8 @@ ENCODED=$(cat <<'EOF' | base64
     <in>P2</in>
     <out>P1</out>
 </chain>
+
+</regular>
 
 </run>
 EOF

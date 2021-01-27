@@ -22,17 +22,21 @@ Let the XML task be like:
 ```
 <run>
 
-    <filter id="1">
-        <or>
-            <find name="ip.dst" relation="==" content="8.8.8.8"></find>
-        </or>
-    </filter>
+<filter id="1">
+<or>
+    <find name="ip.dst" relation="==" content="8.8.8.8"></find>
+</or>
+</filter>
 
-    <chain>
-        <in>P1</in>
-        <fid>F1</fid>
-        <out>P2</out>
-    </chain>
+<regular>
+
+<chain>
+    <in>P1</in>
+    <fid>F1</fid>
+    <out>P2</out>
+</chain>
+
+</regular>
 
 </run>
 ```

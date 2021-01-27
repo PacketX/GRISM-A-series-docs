@@ -9,7 +9,7 @@ Behave as a GRISM extended physical ports.
 |:---------------:|:--------------:|:-----------------------------:|:--------------------------------------------------------------------------------:|
 |        in       |      Ports     |    Physical ports for input   |                       Can be multiple inputs separated by ,                      |
 |       out       |      Ports     | Physical ports for for output |                      Can be multiple outputs separated by ,                      |
-| vlan\_id\_start | 0-4095 integer |   The VLAN ID start tagging   | If start id plus maximum output port number is greater than 4095 will be invalid |
+| vlan\_id\_start | 0-4095 integer |   The VLAN ID start tagging   | If start ID plus maximum output port number is greater than 4095 will be invalid |
 
 <h2>Example</h2>
 
@@ -31,6 +31,8 @@ Behave as a GRISM extended physical ports.
 
 ```
 <run>
+
+<regular>
 
 <output id="1">
     <port>P10</port>
@@ -135,6 +137,8 @@ Behave as a GRISM extended physical ports.
         <out>O8</out>
     </next>
 </chain>
+
+</regular>
 
 </run>
 ```

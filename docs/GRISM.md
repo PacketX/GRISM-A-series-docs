@@ -24,11 +24,15 @@ This is an example for filter out `udp port 53`.
 </or>
 </filter>
 
+<regular>
+
 <chain>
     <in>P1</in>
     <fid>F1</fid>
     <out>P2</out>
 </chain>
+
+</regular>
 
 </run>
 ```

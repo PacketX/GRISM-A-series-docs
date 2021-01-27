@@ -5,12 +5,12 @@ Chain
 
 <h2>Child Elements</h2>
 
-| Eelment |  Content  |               Description              |                                    Note                                   |
-|:-------:|:---------:|:--------------------------------------:|:-------------------------------------------------------------------------:|
-|    in   |   Ports   |        Physical ports for input        |                   Can be multiple inputs separated by ,                   |
-|   out   |   Ports   | Physical ports or output ID for output | `0` and `drop` means drop packets. Can be multiple outputs separated by , |
-|   fid   | Filter ID |            Filter unique ID            |                                                                           |
-|   next  | See below |         Continue chain content         |                                                                           |
+| Eelment |  Content  |               Description              |                  Note                  |
+|:-------:|:---------:|:--------------------------------------:|:--------------------------------------:|
+|    in   |   Ports   |        Physical ports for input        |  Can be multiple inputs separated by , |
+|   out   |   Ports   | Physical ports or output ID for output | Can be multiple outputs separated by , |
+|   fid   | Filter ID |            Filter unique ID            |                                        |
+|   next  | See below |         Continue chain content         |                                        |
 
 <h3>&lt;in&gt; Tag</h3>
 
@@ -24,7 +24,7 @@ Chain
 
 <h3>&lt;out&gt; Tag</h3>
 
-`<out>` tag described what physical port or `<output>` tag used as output. Port number start with prefix `P`, and port number can be formatted as range.
+`<out>` tag described what physical port or [`<output>`](Element/run/regular/output.md) tag used as output. Port number start with prefix `P`, and port number can be formatted as range. `0` and `drop` means drop packets.
 
 | Attribute |  Description  |                 Type                |
 |:---------:|:-------------:|:-----------------------------------:|
@@ -36,7 +36,7 @@ Chain
 
 If attribute `type` is `loadBalance`, there is couple limits:
 
-1. Cannot use `<output>` tag as an output, which mean: O1, O2 is an invalid output port in this situation.
+1. Cannot use [`<output>`](Element/run/regular/output.md) tag as an output, which mean: O1, O2 is an invalid output port in this situation.
 
 <h4>&lt;out&gt; Tag Example</h4>
 
@@ -46,7 +46,7 @@ If attribute `type` is `loadBalance`, there is couple limits:
 
 <h3>&lt;fid&gt; Tag</h3>
 
-`<fid>` tag described what filter to use, one filter id only.
+`<fid>` tag described what [`<filter>`](Element/run/filter.md) to use, one filter id only.
 
 <h4>&lt;fid&gt; Tag Example</h4>
 
@@ -90,11 +90,23 @@ P1 -> F1 -> P2
 ```
 <run>
 
+<regular>
+
+<filter id="1">
+<or>
+
+...
+
+</or>
+</filter>
+
 <chain>
     <in>P1</in>
     <fid>F1</fid>
     <out>P2</out>
 </chain>
+
+</regular>
 
 </run>
 ```
@@ -114,6 +126,24 @@ P1 -> F1 ↴
 ```
 <run>
 
+<regular>
+
+<filter id="1">
+<or>
+
+...
+
+</or>
+</filter>
+
+<filter id="2">
+<or>
+
+...
+
+</or>
+</filter>
+
 <chain>
     <in>P1</in>
     <fid>F1</fid>
@@ -125,6 +155,8 @@ P1 -> F1 ↴
         <out>P3</out>
     </next>
 </chain>
+
+</regular>
 
 </run>
 ```
@@ -144,9 +176,28 @@ P1 -> F1 ↴
 ```
 <run>
 
+<regular>
+
+<filter id="1">
+<or>
+
+...
+
+</or>
+</filter>
+
+<filter id="2">
+<or>
+
+...
+
+</or>
+</filter>
+
 <output id="1">
-    <port>P3</port>
-    <stripping>vlan</stripping>
+
+...
+
 </output>
 
 <chain>
@@ -160,6 +211,8 @@ P1 -> F1 ↴
         </next>
     </next>
 </chain>
+
+</regular>
 
 </run>
 ```

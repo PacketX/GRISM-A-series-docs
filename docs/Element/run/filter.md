@@ -1,7 +1,7 @@
 Filter
 ============
 
-`<filter>` tag described `<find>` tags set.
+`<filter>` tag described [`<find>`](Element/run/filter/find.md) tags set.
 
 <h2>Attribute</h2>
 
@@ -31,4 +31,4 @@ Filter
 
 <h2>Usage</h2>
 
-`<filter id="1">` will be compiled as `F1`, used by `<fid>F1</fid>` tag within `<chain>` tag.
+`<filter id="1">` will be compiled as `F1`. Using by `<fid>F1</fid>` form.

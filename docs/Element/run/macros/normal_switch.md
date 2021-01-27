@@ -1,7 +1,7 @@
 Normal Switch
 ==========
 
-Behave as a simple L2 switch. Performance is concerns.
+Behave as a simple L2 switch. This macros tag may impact the performance.
 
 <h2>Example</h2>
 
