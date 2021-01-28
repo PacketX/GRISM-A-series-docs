@@ -1,4 +1,5 @@
 * [GRISM](GRISM.md)
+* [News](News.md)
 * [Element](Element.md)
 	* [Run](Element/run.md)
 		* [Filter](Element/run/filter.md)
