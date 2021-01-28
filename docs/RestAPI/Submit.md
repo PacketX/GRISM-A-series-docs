@@ -34,7 +34,7 @@ $ curl -k \
 |   Form   |    { "Base64Xml": "xxxxx" }    |
 | Response | {} or {"ErrorMessage": "xxxx"} |
 
-Second, the XML task needs encode as base64.
+Second, the XML task needs encode as `base64`.
 
 ```
 ENCODED=$(cat <<'EOF' | base64

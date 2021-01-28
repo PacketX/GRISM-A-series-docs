@@ -1,7 +1,7 @@
 Patch
 =============
 
-Patch is to revise a `<filter>` tag on existing task. Before doing patching a filter, must have an existing XML task.
+Patch is to revise a [`<filter>`](Element/run/filter.md) tag on existing task. Before doing patching a filter, must have an existing XML task.
 
 Supported operation:
 
@@ -41,7 +41,7 @@ Let the XML task be like:
 </run>
 ```
 
-As same as the API [`/submit/renew`](RestAPI/Submit.md#renew), encode as base64.
+As same as the API [`/submit/renew`](RestAPI/Submit.md#renew), encode as `base64`.
 
 ```
 ENCODED=$(cat <<'EOF' | base64
