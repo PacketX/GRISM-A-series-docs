@@ -5,8 +5,8 @@ Macros
 
 <h2>Child Elements</h2>
 
-* [`Normal Switch`](Element/run/macros/normal_switch.md)
-* [`Extend GRISM`](Element/run/macros/extend_grism.md)
+* [`Normal Switch`](macros/normal_switch.md)
+* [`Extend GRISM`](macros/extend_grism.md)
 
 <h2>Example</h2>
 
