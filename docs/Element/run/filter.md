@@ -1,7 +1,7 @@
 Filter
 ============
 
-`<filter>` tag described [`<find>`](run/filter/find.md) tags set.
+`<filter>` tag described [`<find>`](filter/find.md) tags set.
 
 <h2>Attribute</h2>
 
