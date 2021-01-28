@@ -5,12 +5,12 @@ Chain
 
 <h2>Child Elements</h2>
 
-| Eelment |  Content  |               Description              |                  Note                  |
-|:-------:|:---------:|:--------------------------------------:|:--------------------------------------:|
-|    in   |   Ports   |        Physical ports for input        |  Can be multiple inputs separated by , |
-|   out   |   Ports   | Physical ports or output ID for output | Can be multiple outputs separated by , |
-|   fid   | Filter ID |            Filter unique ID            |                                        |
-|   next  | See below |         Continue chain content         |                                        |
+| Eelment |  Content  |               Description              | Must |                  Note                  |
+|:-------:|:---------:|:--------------------------------------:|:----:|:--------------------------------------:|
+|    in   |   Ports   |        Physical ports for input        |  Yes |  Can be multiple inputs separated by , |
+|   out   |   Ports   | Physical ports or output ID for output |  Yes | Can be multiple outputs separated by , |
+|   fid   | Filter ID |            Filter unique ID            |  No  |                                        |
+|   next  | See below |         Continue chain content         |  No  |                                        |
 
 <h3>&lt;in&gt; Tag</h3>
 
@@ -26,9 +26,9 @@ Chain
 
 `<out>` tag described what physical port or [`<output>`](Element/run/regular/output.md) tag used as output. Port number start with prefix `P`, and port number can be formatted as range. `0` and `drop` means drop packets.
 
-| Attribute |  Description  |                 Type                |
-|:---------:|:-------------:|:-----------------------------------:|
-|    type   | How to output | 'duplicate' or 'loadBalance' string |
+| Attribute |  Description  |                 Type                | Must |
+|:---------:|:-------------:|:-----------------------------------:|:----:|
+|    type   | How to output | 'duplicate' or 'loadBalance' string |  Yes |
 
 **If attribute `type` is not specified, `duplicate` is chosen.**
 
@@ -58,9 +58,9 @@ If attribute `type` is `loadBalance`, there is couple limits:
 
 `<next>` tag described when if packet match or not match a filter actions that the continue tags.
 
-| Attribute |           Description          |             Type             |
-|:---------:|:------------------------------:|:----------------------------:|
-|    type   | What condition of \<next\> tag | 'match' or 'notmatch' string |
+| Attribute |       Description       |             Type             | Must |
+|:---------:|:-----------------------:|:----------------------------:|:----:|
+|    type   | What condition of \ tag | 'match' or 'notmatch' string |  Yes |
 
 <h4>&lt;next&gt; Tag Example</h4>
 

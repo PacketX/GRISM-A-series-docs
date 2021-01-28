@@ -5,30 +5,30 @@ Output
 
 <h2>Attribute</h2>
 
-| Attribute |       Description       |   Type  |
-|:---------:|:-----------------------:|:-------:|
-|     id    | Unique ID in whole task | Integer |
+| Attribute |       Description       |   Type  | Must |
+|:---------:|:-----------------------:|:-------:|:----:|
+|     id    | Unique ID in whole task | Integer |  Yes |
 
 <h2>Child Elements</h2>
 
-|  Eelment  |     Content    |         Description         |                          Note                         |
-|:---------:|:--------------:|:---------------------------:|:-----------------------------------------------------:|
-|    port   |     A port     |  Physical ports for output  |                                                       |
-| stripping |    See note    |        strip a header       |                  Accept keyword: vlan                 |
-|     Q     | 0-4095 integer | Add or modify a VLAN header | '\<Q\>' tag and '\<QinQ\>' tag cannot be use together |
-|    QinQ   | 0-4095 integer |      Push a VLAN header     | '\<Q\>' tag and '\<QinQ\>' tag cannot be use together |
+|  Eelment  |     Content    |         Description         | Must |                    Note                    |
+|:---------:|:--------------:|:---------------------------:|:----:|:------------------------------------------:|
+|    port   |     A port     |  Physical ports for output  |  Yes |                                            |
+| stripping |    See note    |        strip a header       |  No  |            Accept keyword: vlan            |
+|     Q     | 0-4095 integer | Add or modify a VLAN header |  No  | '\' tag and '\' tag cannot be use together |
+|    QinQ   | 0-4095 integer |      Push a VLAN header     |  No  | '\' tag and '\' tag cannot be use together |
 
 <h3>&lt;Q&gt; Tag Attribute</h3>
 
-| Attribute |  Description  |     Type    |
-|:---------:|:-------------:|:-----------:|
-|  priority | VLAN priority | 0-7 integer |
+| Attribute |  Description  |     Type    | Must |
+|:---------:|:-------------:|:-----------:|:----:|
+|  priority | VLAN priority | 0-7 integer |  Yes |
 
 <h3>&lt;QinQ&gt; Tag Attribute</h3>
 
-| Attribute |  Description  |     Type    |
-|:---------:|:-------------:|:-----------:|
-|  priority | VLAN priority | 0-7 integer |
+| Attribute |  Description  |     Type    | Must |
+|:---------:|:-------------:|:-----------:|:----:|
+|  priority | VLAN priority | 0-7 integer |  Yes |
 
 <h4>&lt;QinQ&gt; Limits</h4>
 

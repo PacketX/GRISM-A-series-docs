@@ -5,11 +5,11 @@ Find
 
 <h2>Attribute</h2>
 
-| Attribute |       Description       |    Type   |
-|:---------:|:-----------------------:|:---------:|
-|    name   |  Match field in packet  |   String  |
-|  relation |     Match operation     | See below |
-|  content  |      Match content      | See below |
+| Attribute |      Description      |    Type   | Must |
+|:---------:|:---------------------:|:---------:|:----:|
+|    name   | Match field in packet |   String  |  Yes |
+|  relation |    Match operation    | See below |  Yes |
+|  content  |     Match content     | See below |  Yes |
 
 <h2>Name</h2>
 

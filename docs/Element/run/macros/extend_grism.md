@@ -5,11 +5,11 @@ Behave as a GRISM extended physical ports.
 
 <h2>Child Elements</h2>
 
-|     Eelment     |     Content    |          Description          |                                       Note                                       |
-|:---------------:|:--------------:|:-----------------------------:|:--------------------------------------------------------------------------------:|
-|        in       |      Ports     |    Physical ports for input   |                       Can be multiple inputs separated by ,                      |
-|       out       |      Ports     | Physical ports for for output |                      Can be multiple outputs separated by ,                      |
-| vlan\_id\_start | 0-4095 integer |   The VLAN ID start tagging   | If start ID plus maximum output port number is greater than 4095 will be invalid |
+|     Eelment     |     Content    |          Description          | Must |                                       Note                                       |
+|:---------------:|:--------------:|:-----------------------------:|:----:|:--------------------------------------------------------------------------------:|
+|        in       |      Ports     |    Physical ports for input   |  Yes |                       Can be multiple inputs separated by ,                      |
+|       out       |      Ports     | Physical ports for for output |  Yes |                      Can be multiple outputs separated by ,                      |
+| vlan\_id\_start | 0-4095 integer |   The VLAN ID start tagging   |  Yes | If start ID plus maximum output port number is greater than 4095 will be invalid |
 
 <h2>Example</h2>
 

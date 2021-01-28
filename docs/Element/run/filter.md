@@ -5,9 +5,9 @@ Filter
 
 <h2>Attribute</h2>
 
-| Attribute |       Description       |   Type  |
-|:---------:|:-----------------------:|:-------:|
-|     id    | Unique ID in whole task | Integer |
+| Attribute |       Description       |   Type  | Must |
+|:---------:|:-----------------------:|:-------:|:----:|
+|     id    | Unique ID in whole task | Integer |  Yes |
 
 <h2>Condition</h2>
 
