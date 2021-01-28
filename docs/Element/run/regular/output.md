@@ -91,4 +91,4 @@ Output
 
 <h2>Usage</h2>
 
-`<output id="1">` will be compiled as `O1`, used by `<out>O1</out>` tag within [`<chain>`](Element/run/regular/chain.md) tag.
+`<output id="1">` will be compiled as `O1`, used by `<out>O1</out>` tag within [`<chain>`](chain.md) tag.
