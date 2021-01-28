@@ -81,11 +81,11 @@ EOF
 )
 ```
 
-POST it.
+PATCH it.
 
 ```
 $ curl -k \
-    -X POST \
+    -X PATCH \
     -H "Content-Type: application/json" \
     -H "X-PacketX-Username: packetx" \
     -d "{ \"Base64Filter\": \"$ENCODED\" }" \
@@ -160,9 +160,9 @@ ENCODED=$(cat <<'EOF' | base64
 EOF
 )
 
-# post
+# patch
 curl -k \
-    -X POST \
+    -X PATCH \
     -H "Content-Type: application/json" \
     -H "X-PacketX-Username: packetx" \
     -d "{ \"Base64Filter\": \"$ENCODED\" }" \
