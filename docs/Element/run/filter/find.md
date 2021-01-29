@@ -120,6 +120,8 @@ All integer type content is accepted following prefix as carry:
 
 The names basically still the same as above, but will be expanded as described.
 
+**The `relation` and `content` only can be `"=="` and `""`.**
+
 |       Name      |           Description          |                                                       Expansion                                                      |
 |:---------------:|:------------------------------:|:--------------------------------------------------------------------------------------------------------------------:|
 |       mpls      |  Is MPLS unicast and multicast |                                       eth.type == 0x8847 or eth.type == 0x8848                                       |
