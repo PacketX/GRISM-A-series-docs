@@ -24,7 +24,7 @@ Chain
 
 <h3>&lt;out&gt; Tag</h3>
 
-`<out>` tag described what physical port or [`<output>`](Element/run/regular/output.md) tag used as output. Port number start with prefix `P`, and port number can be formatted as range. `0` and `drop` means drop packets.
+`<out>` tag described what physical port or [`<output>`](Element/run/output.md) tag used as output. Port number start with prefix `P`, and port number can be formatted as range. `0` and `drop` means drop packets.
 
 | Attribute |  Description  |                 Type                | Must |
 |:---------:|:-------------:|:-----------------------------------:|:----:|
@@ -36,7 +36,7 @@ Chain
 
 If attribute `type` is `loadBalance`, there is couple limits:
 
-1. Cannot use [`<output>`](Element/run/regular/output.md) tag as an output, which mean: O1, O2 is an invalid output port in this situation.
+1. Cannot use [`<output>`](Element/run/output.md) tag as an output, which mean: O1, O2 is an invalid output port in this situation.
 
 <h4>&lt;out&gt; Tag Example</h4>
 

@@ -3,13 +3,14 @@ Run
 
 The world start from here. Only can be used once.
 
-There is three category tags available:
+There is four category tags available:
 
 1. [`<filter>`](Element/run/filter.md)
-2. [`<regular>`](Element/run/regular.md)
-3. [`<macros>`](Element/run/macros.md)
+2. [`<output>`](Element/run/output.md)
+3. [`<regular>`](Element/run/regular.md)
+4. [`<macros>`](Element/run/macros.md)
 
-**[`<filter>`](Element/run/filter.md) able to cross over all category tags.**
+**[`<filter>`](Element/run/filter.md) and [`<output>`](Element/run/output.md) able to cross over all category tags.**
 
 <h2>Example</h2>
 
