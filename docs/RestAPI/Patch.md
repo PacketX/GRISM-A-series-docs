@@ -121,7 +121,7 @@ curl -k \
     -H "Content-Type: application/json" \
     -d '{"Username":"packetx", "PasswordHash":"xxxxx"}' \
     -c cookie.txt \
-    https://${IP_ADDR}/login
+    https://${IP_ADDR}/direct_login
 
 # encode as base64
 ENCODED=$(cat <<'EOF' | base64

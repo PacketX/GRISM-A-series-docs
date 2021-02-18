@@ -5,16 +5,14 @@ First, login.
 
 <h2 id="login">Login</h2>
 
-|          |                        Login                        |
-|:--------:|:---------------------------------------------------:|
-|  Method  |                         POST                        |
-|   Path   |                        /login                       |
-|   Form   | {"Username":"packetx", "PasswordHash":"xxxxxxxxxx"} |
-| Response |        Home page or {"ErrorMessage": "xxxx"}        |
+|          |                        Login                        |                     Direct Login                    |
+|:--------:|:---------------------------------------------------:|:---------------------------------------------------:|
+|  Method  |                         POST                        |                         POST                        |
+|   Path   |                        /login                       |                    /direct_login                    |
+|   Form   | {"Username":"packetx", "PasswordHash":"xxxxxxxxxx"} | {"Username":"packetx", "PasswordHash":"xxxxxxxxxx"} |
+| Response |        Home page or {"ErrorMessage": "xxxx"}        |            {} or {"ErrorMessage": "xxxx"}           |
 
-You should get the correct authorization before doing anything.
-
-`PasswordHash` is the password hash by `hash256`.
+You should get the correct authorization before doing anything. `PasswordHash` is the password hash by `hash256`. The difference of `/login` and `/direct_login` is the former return the home page on success and the latter return `{}` on success, it's for reduce the stress of bandwidth.
 
 ```
 $ curl -k \
@@ -22,7 +20,7 @@ $ curl -k \
     -H "Content-Type: application/json" \
     -d '{"Username":"packetx", "PasswordHash":"xxxxxxxxxx"}' \
     -c cookie.txt \
-    https://${IP_ADDR}/login
+    https://${IP_ADDR}/direct_login
 ```
 
 <h2 id="renew">Submit</h2>
@@ -122,7 +120,7 @@ curl -k \
     -H "Content-Type: application/json" \
     -d '{"Username":"packetx", "PasswordHash":"xxxxx"}' \
     -c cookie.txt \
-    https://${IP_ADDR}/login
+    https://${IP_ADDR}/direct_login
 
 # encode as base64
 ENCODED=$(cat <<'EOF' | base64
