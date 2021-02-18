@@ -42,14 +42,10 @@ Output
 ```
 <run>
 
-<regular>
-
 <output id="1">
     <port>P1</port>
     <stripping>vlan</stripping>
 </output>
-
-</regular>
 
 </run>
 ```
@@ -59,14 +55,10 @@ Output
 ```
 <run>
 
-<regular>
-
 <output id="2">
     <port>P2</port>
     <Q>10</Q>
 </output>
-
-</regular>
 
 </run>
 ```
@@ -76,15 +68,11 @@ Output
 ```
 <run>
 
-<regular>
-
 <output id="3">
     <port>P3</port>
     <QinQ priority="2">15</QinQ>
     <QinQ priority="3">20</QinQ>
 </output>
-
-</regular>
 
 </run>
 ```

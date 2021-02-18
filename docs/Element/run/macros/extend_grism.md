@@ -32,8 +32,6 @@ Behave as a GRISM extended physical ports.
 ```
 <run>
 
-<regular>
-
 <output id="1">
     <port>P10</port>
     <Q>101</Q>
@@ -97,6 +95,8 @@ Behave as a GRISM extended physical ports.
     <find name="vlan.id" relation="==" content="107" />
 </or>
 </filter>
+
+<regular>
 
 <chain>
     <in>P1</in>
