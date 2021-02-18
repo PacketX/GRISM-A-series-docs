@@ -5,16 +5,16 @@ Chain
 
 <h2>Child Elements</h2>
 
-| Eelment |  Content  |               Description              | Must |                  Note                  |
-|:-------:|:---------:|:--------------------------------------:|:----:|:--------------------------------------:|
-|    in   |   Ports   |        Physical ports for input        |  Yes |  Can be multiple inputs separated by , |
-|   out   |   Ports   | Physical ports or output ID for output |  Yes | Can be multiple outputs separated by , |
-|   fid   | Filter ID |            Filter unique ID            |  No  |                                        |
-|   next  | See below |         Continue chain content         |  No  |                                        |
+| Eelment |  Content  |               Description              | Must | Note |
+|:-------:|:---------:|:--------------------------------------:|:----:|:----:|
+|    in   |   Ports   |        Physical ports for input        |  Yes |      |
+|   out   |   Ports   | Physical ports or output ID for output |  Yes |      |
+|   fid   | Filter ID |            Filter unique ID            |  No  |      |
+|   next  | See below |         Continue chain content         |  No  |      |
 
 <h3>&lt;in&gt; Tag</h3>
 
-`<in>` tag described what physical port used as input. Port number start with prefix `P`, and port number can be formatted as range.
+`<in>` tag described what physical port used as input. Port number start with prefix `P` and port number can be formatted as range. `any` means any port. Multiple input port separated by ` ,`.
 
 <h4>&lt;in&gt; Tag Example</h4>
 
@@ -24,11 +24,11 @@ Chain
 
 <h3>&lt;out&gt; Tag</h3>
 
-`<out>` tag described what physical port or [`<output>`](Element/run/output.md) tag used as output. Port number start with prefix `P`, and port number can be formatted as range. `0` and `drop` means drop packets.
+`<out>` tag described what physical port or [`<output>`](Element/run/output.md) tag used as output. Port number start with prefix `P` and port number can be formatted as range. `0` and `drop` means drop packets. Multiple output port separated by ` ,`.
 
 | Attribute |  Description  |                 Type                | Must |
 |:---------:|:-------------:|:-----------------------------------:|:----:|
-|    type   | How to output | 'duplicate' or 'loadBalance' string |  Yes |
+|    type   | How to output | 'duplicate' or 'loadBalance' string |  No  |
 
 **If attribute `type` is not specified, `duplicate` is chosen.**
 
@@ -37,6 +37,7 @@ Chain
 If attribute `type` is `loadBalance`, there is couple limits:
 
 1. Cannot use [`<output>`](Element/run/output.md) tag as an output, which mean: O1, O2 is an invalid output port in this situation.
+2. The maximum of member ports is `8`.
 
 <h4>&lt;out&gt; Tag Example</h4>
 
@@ -58,9 +59,11 @@ If attribute `type` is `loadBalance`, there is couple limits:
 
 `<next>` tag described when if packet match or not match a filter actions that the continue tags.
 
-| Attribute |       Description       |             Type             | Must |
-|:---------:|:-----------------------:|:----------------------------:|:----:|
-|    type   | What condition of \ tag | 'match' or 'notmatch' string |  Yes |
+| Attribute |           Description          |             Type             | Must |
+|:---------:|:------------------------------:|:----------------------------:|:----:|
+|    type   | What condition of \<next\> tag | 'match' or 'notmatch' string |  No  |
+
+**If attribute `type` is not specified, `match` is chosen.**
 
 <h4>&lt;next&gt; Tag Example</h4>
 
