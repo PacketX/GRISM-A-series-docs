@@ -134,7 +134,9 @@ The names basically still the same as above, but will be expanded as described.
 |       bgp       |             Is BGP             |                                                    tcp.port == 179                                                   |
 |       rip       |           Is RIPv1/v2          |                                                    udp.port == 520                                                   |
 |      ripng      |            Is RIPng            |                                                    udp.port == 521                                                   |
-|       dns       |           Is DNS/mDNS          |              udp.port == 53 or tcp.port == 53 or udp.port == 5353 or tcp.port == 5353 or sctp.port == 53             |
+|       dns       |             Is DNS             |                        udp.port == 53 or tcp.port == 53 or tcp.port == 5353 or sctp.port == 53                       |
+|       mdns      |             Is mDNS            |                                                   udp.port == 5353                                                   |
+|      llmnr      |            Is LLMNR            |                                                   udp.port == 5353                                                   |
 |       doh       |        Is DNS over HTTPS       |                                                    tcp.port == 853                                                   |
 |       dot       |         Is DNS over TLS        |                                                    tcp.port == 853                                                   |
 |       http      |             Is HTTP            |                                                    tcp.port == 80                                                    |
