@@ -65,6 +65,10 @@ If attribute `type` is `loadBalance`, there is couple limits:
 
 **If attribute `type` is not specified, `match` is chosen.**
 
+<h4>&lt;next&gt; Limits</h4>
+
+If any filter is in match mode, there is no `<next>` tag can be used, whatever the filter is used or not. See [match mode](Element/run/filter/find.md#match_mode).
+
 <h4>&lt;next&gt; Tag Example</h4>
 
 ```
