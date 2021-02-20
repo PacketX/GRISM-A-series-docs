@@ -10,6 +10,7 @@
 		* [Macros](Element/run/macros.md)
 			* [Normal Switch](Element/run/macros/normal_switch.md)
 			* [Extend GRISM](Element/run/macros/extend_grism.md)
+			* [PTP E2ETC Transparent](Element/run/macros/ptp_e2etc_transparent.md)
 * [RestAPI](RestAPI.md)
 	* [Submit](RestAPI/Submit.md)
 	* [Patch](RestAPI/Patch.md)

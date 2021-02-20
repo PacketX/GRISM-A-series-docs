@@ -1,6 +1,10 @@
 News
 =========
 
+<h2>2021/02/21</h2>
+
+* [`<macros>`](Element/run/macros.md): add [`<ptp_e2etc_transparent>`](Element/run/macros/ptp_e2etc_transparent.md) tag for [`PTP E2ETC Transparent`](Element/run/macros/ptp_e2etc_transparent.md).
+
 <h2>2021/02/20</h2>
 
 * [`Find name`](Element/run/filter/find.md#name): add `eth.bcast`, `eth.mcast`, `eth.mcastv6`, `vlan.dei`, `vlan.tci`, `mpls.label`, `mpls.tc`, `mpls.bottom`, `ip.mcast`, `ip.src_mcast`, `ip.fragment`, `ipv6.mcast_rsvd`, `ipv6.mcast_all_nodes`, `ipv6.mcast_all_rtrs`, `ipv6.mcast_sol_node`, `ipv6.mcast_flood`, `ipv6.mcast`, `mldv1`, `mldv2`, `ipv6.fragment`, `tcp.flags.[800]`, `tcp.flags.[400]`, `tcp.flags.[200]`, `tcp.flags.ns`, `tcp.flags.cwr`, `tcp.flags.ecn`, `tcp.flags.ece`, `tcp.flags.urg`, `tcp.flags.ack`, `tcp.flags.push`, `tcp.flags.psh`, `tcp.flags.reset`, `tcp.flags.rst`, `tcp.flags.syn`, `tcp.flags.fin` and `tcp.flags`.
@@ -9,7 +13,7 @@ News
 
 <h2>2021/02/19</h2>
 
-* RestAPI: replace `/login` with `/direct_login`.
+* RestAPI: replace [`/login`](RestAPI/Submit.md#login) with [`/direct_login`](RestAPI/Submit.md#login).
 
 <h2>2021/02/01</h2>
 
