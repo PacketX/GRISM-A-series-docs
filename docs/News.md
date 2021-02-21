@@ -1,6 +1,10 @@
 News
 =========
 
+<h2>2021/02/22</h2>
+
+* [`<macros>`](Element/run/macros.md): add [`<mec>`](Element/run/macros/mec.md) tag for [`MEC`](Element/run/macros/mec.md).
+
 <h2>2021/02/21</h2>
 
 * [`<macros>`](Element/run/macros.md): add [`<ptp_e2etc_transparent>`](Element/run/macros/ptp_e2etc_transparent.md) tag for [`PTP E2ETC Transparent`](Element/run/macros/ptp_e2etc_transparent.md).
