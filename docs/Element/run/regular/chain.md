@@ -9,7 +9,7 @@ Chain
 |:-------:|:---------:|:--------------------------------------:|:----:|:----:|
 |    in   |   Ports   |        Physical ports for input        |  Yes |      |
 |   out   |   Ports   | Physical ports or output ID for output |  Yes |      |
-|   fid   | Filter ID |            Filter unique ID            |  No  |      |
+|   fid   | Filter ID |                Filter ID               |  No  |      |
 |   next  | See below |         Continue chain content         |  No  |      |
 
 <h3>&lt;in&gt; Tag</h3>

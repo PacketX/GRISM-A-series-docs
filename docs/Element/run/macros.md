@@ -9,6 +9,7 @@ Macros
 * [`Extend GRISM`](Element/run/macros/extend_grism.md)
 * [`PTP E2ETC Transparent`](Element/run/macros/ptp_e2etc_transparent.md)
 * [`MEC`](Element/run/macros/mec.md)
+* [`SSLi Service Chain`](Element/run/macros/ssli_service_chain.md)
 
 <h2>Example</h2>
 

@@ -5,14 +5,14 @@ For `MEC`(`Mobile Edge Computing`) solution.
 
 <h2>Child Elements</h2>
 
-|      Eelment     |  Content  |                 Description                 | Must | Note |
-|:----------------:|:---------:|:-------------------------------------------:|:----:|:----:|
-|     cell_port    |    Port   |         Physical port close to cell         |  Yes |      |
-|     core_port    |    Port   |         Physical port close to core         |  Yes |      |
-|     lbo_port     |    Port   |       Physical port for local breakout      |  Yes |      |
-|  not\_lbo\_port  |    Port   |     Physical port for non-local breakout    |  Yes |      |
-|     s1ap_port    |    Port   |    Physical port for S1AP packets mirror    |  No  |      |
-| cell\_filter\_id | Filter ID | Filter unique ID to determine cell datapath |  No  |      |
+|      Eelment     |  Content  |              Description              | Must | Note |
+|:----------------:|:---------:|:-------------------------------------:|:----:|:----:|
+|     cell_port    |    Port   |      Physical port close to cell      |  Yes |      |
+|     core_port    |    Port   |      Physical port close to core      |  Yes |      |
+|     lbo_port     |    Port   |    Physical port for local breakout   |  Yes |      |
+|  not\_lbo\_port  |    Port   |  Physical port for non-local breakout |  Yes |      |
+|     s1ap_port    |    Port   | Physical port for S1AP packets mirror |  No  |      |
+| cell\_filter\_id | Filter ID |  Filter ID to determine cell datapath |  No  |      |
 
 **If `<s1ap_port>` tag is not set, it will be act as 5G environment.**
 
