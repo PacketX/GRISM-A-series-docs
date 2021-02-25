@@ -27,6 +27,38 @@ For `SSLi` service chain solution.
 
 **The macros expanded [`<next>`](Element/run/regular/chain.md#next_limits) tag won't be affect by [match mode](Element/run/filter/find.md#match_mode).**
 
+<h2>Topology1(with DMZ)</h2>
+
+```
+   +---------+               +-----+
+   | DMZ WAN |               | WAN |
+   +----+----+               +--+--+
+        | P2                    | P10
+    +---+-----------------------+---+               SSLi
+    |                               |  WAN P6  +-------------+
+    |                               +----------+             |
+    |                               +----------+             |
+    |                               |  LAN P8  |             |
+    |                               |          |             |
+    |                               |  WAN P7  |             |
+    |                               +----------+             |
+    |                               +----------+             |
+    |            GRISM-A            |  LAN P5  +-------------+
+    |                               |
+    |                               |
+    |                               |
+    |                               |           Service Chain
+    |                               |  WAN P4  +-------------+
+    |                               +----------+             |
+    |                               +----------+             |
+    |                               |  LAN P3  +-------------+
+    +---+-----------------------+---+
+        | P1                    | P9
+   +----+----+               +--+--+
+   | DMZ LAN |               | LAN |
+   +---------+               +-----+
+```
+
 <h2>Example1(with DMZ)</h2>
 
 ```
@@ -202,6 +234,38 @@ For `SSLi` service chain solution.
 </regular>
 
 </run>
+```
+
+<h2>Topology2(without DMZ)</h2>
+
+```
+                 +-----+
+                 | WAN |
+                 +--+--+
+                    | P10
+    +---------------+---------------+               SSLi
+    |                               |  WAN P6  +-------------+
+    |                               +----------+             |
+    |                               +----------+             |
+    |                               |  LAN P8  |             |
+    |                               |          |             |
+    |                               |  WAN P7  |             |
+    |                               +----------+             |
+    |                               +----------+             |
+    |            GRISM-A            |  LAN P5  +-------------+
+    |                               |
+    |                               |
+    |                               |
+    |                               |           Service Chain
+    |                               |  WAN P4  +-------------+
+    |                               +----------+             |
+    |                               +----------+             |
+    |                               |  LAN P3  +-------------+
+    +---------------+---------------+
+                    | P9
+                 +--+--+
+                 | LAN |
+                 +-----+
 ```
 
 <h2>Example2(without DMZ)</h2>

@@ -18,6 +18,32 @@ For `MEC`(`Mobile Edge Computing`) solution.
 
 **The macros expanded [`<next>`](Element/run/regular/chain.md#next_limits) tag won't be affect by [match mode](Element/run/filter/find.md#match_mode).**
 
+<h2>Topology</h2>
+
+```
+   +---------+         +---------+
+   | 4G Cell |         | 5G Cell |
+   +----+----+         +----+----+
+        | P49               | P51
+    +---+-------------------+---+            +-------------+
+    |                           |   LBO P1   |             |
+    |                           +------------+             |
+    |                           |            |             |
+    |                           | not-LBO P2 |             |
+    |                           +------------+   GRISM-T   |
+    |          GRISM-A          |            |             |
+    |                           |   S1AP P3  |             |
+    |                           +------------+             |
+    |                           |            |             |
+    |                           |            +-------------+
+    |                           |
+    +---+-------------------+---+
+        | P50               | P52
+   +----+----+         +----+----+
+   | 4G Core |         | 5G Core |
+   +---------+         +---------+
+```
+
 <h2>Example</h2>
 
 ```

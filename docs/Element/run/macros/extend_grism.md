@@ -11,6 +11,22 @@ Behave as a GRISM extended physical ports.
 |       out       |      Ports     | Physical ports for for output |  Yes |                      Can be multiple outputs separated by ,                      |
 | vlan\_id\_start | 0-4095 integer |   The VLAN ID start tagging   |  Yes | If start ID plus maximum output port number is greater than 4095 will be invalid |
 
+<h2>Topology</h2>
+
+```
+        +     +
+     P1 |     | P2
+    +---+-----+---+         +-------------+
+    |             |         |             |
+    |             |   P10   |             |
+    |   GRISM-A   +---------+   GRISM-T   |
+    |             |         |             |
+    |             |         |             |
+    +---+-----+---+         +-------------+
+     P3 |     | P7
+        +     +
+```
+
 <h2>Example</h2>
 
 ```
