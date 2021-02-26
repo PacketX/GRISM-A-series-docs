@@ -4,6 +4,7 @@ News
 <h2>2021/02/22</h2>
 
 * [`<macros>`](Element/run/macros.md): add [`<mec>`](Element/run/macros/mec.md) tag for [`MEC`](Element/run/macros/mec.md).
+* [`<macros>`](Element/run/macros.md): add [`<ssli_service_chain>`](Element/run/macros/ssli_service_chain.md) tag for [`SSLi service chain`](Element/run/macros/ssli_service_chain.md).
 
 <h2>2021/02/21</h2>
 
