@@ -23,7 +23,7 @@ For `SSLi` service chain solution.
 
 **If `<dmz_lan_port>`, `<dmz_wan_port>` and `<dmz_filter_id>` tags are set, it will be act as with DMZ.**
 
-**`<find>` tags content of `<encrypt_filter_id>`, `<decrypt_filter_id>` and `<dmz_filter_id>` are conflicts.**
+**`<find>` tags set of `<encrypt_filter_id>`, `<decrypt_filter_id>` and `<dmz_filter_id>` must be mutually exclusive.**
 
 **The macros expanded [`<next>`](Element/run/regular/chain.md#next_limits) tag won't be affect by [match mode](Element/run/filter/find.md#match_mode).**
 

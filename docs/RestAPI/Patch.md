@@ -24,7 +24,7 @@ Let the XML task be like:
 
 <filter id="1">
 <or>
-    <find name="ip.dst" relation="==" content="8.8.8.8"></find>
+    <find name="ip.dst" relation="==" content="8.8.8.8"/>
 </or>
 </filter>
 
