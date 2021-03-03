@@ -11,12 +11,22 @@ Output
 
 <h2>Child Elements</h2>
 
-|  Eelment  |     Content    |         Description         | Must |                    Note                    |
-|:---------:|:--------------:|:---------------------------:|:----:|:------------------------------------------:|
-|    port   |     A port     |  Physical ports for output  |  Yes |                                            |
-| stripping |    See note    |        strip a header       |  No  |            Accept keyword: vlan            |
-|     Q     | 0-4095 integer | Add or modify a VLAN header |  No  | '\' tag and '\' tag cannot be use together |
-|    QinQ   | 0-4095 integer |      Push a VLAN header     |  No  | '\' tag and '\' tag cannot be use together |
+|  Eelment  |     Content    |         Description         | Must |           Note          |
+|:---------:|:--------------:|:---------------------------:|:----:|:-----------------------:|
+|    port   |      Ports     |  Physical ports for output  |  Yes |                         |
+| stripping |    See note    |        strip a header       |  No  | Accept keyword: `vlan`. |
+|     Q     | 0-4095 integer | Add or modify a VLAN header |  No  |                         |
+|    QinQ   | 0-4095 integer |      Push a VLAN header     |  No  |                         |
+
+<h3>&lt;port&gt; Tag</h3>
+
+`<port>` tag described what physical port used as output. Port number start with prefix `P` and port number can be formatted as range. Multiple output port separated by ` ,`.
+
+<h4>&lt;port&gt; Tag Example</h4>
+
+```
+<in>P1, P5, P10-15</in>
+```
 
 <h3>&lt;Q&gt; Tag Attribute</h3>
 
@@ -24,11 +34,15 @@ Output
 |:---------:|:-------------:|:-----------:|:----:|
 |  priority | VLAN priority | 0-7 integer |  Yes |
 
+**`<Q>` tag and `<QinQ>` tag cannot be used together.**
+
 <h3>&lt;QinQ&gt; Tag Attribute</h3>
 
 | Attribute |  Description  |     Type    | Must |
 |:---------:|:-------------:|:-----------:|:----:|
 |  priority | VLAN priority | 0-7 integer |  Yes |
+
+**`<Q>` tag and `<QinQ>` tag cannot be used together.**
 
 <h4>&lt;QinQ&gt; Limits</h4>
 

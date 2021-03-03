@@ -5,11 +5,15 @@ Enable the `PTP` `E2ETC` function on interfaces and  forward the `PTP` packets d
 
 <h2>Child Element</h2>
 
-| Eelment | Content |                Description                | Must |                 Note                 |
-|:-------:|:-------:|:-----------------------------------------:|:----:|:------------------------------------:|
-|   port  |  Ports  | Physical ports to transparent PTP packets |  Yes | Can be multiple ports separated by , |
+| Eelment | Content |                Description                | Must | Note |
+|:-------:|:-------:|:-----------------------------------------:|:----:|:----:|
+|   port  |  Ports  | Physical ports to transparent PTP packets |  Yes |      |
 
 **Once configured ports, it needs to add chains(or other datapath) to forward packets.**
+
+<h3>&lt;port&gt; Tag</h3>
+
+`<port>` tag described what physical ports to transparent PTP packets. Port number start with prefix `P` and port number can be formatted as range. Multiple  port separated by ` ,`.
 
 <h2>Example</h2>
 
