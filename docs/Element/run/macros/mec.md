@@ -16,7 +16,7 @@ For `MEC`(`Mobile Edge Computing`) solution.
 
 **If `<s1ap_port>` tag is not set, it will be act as 5G environment.**
 
-**The macros expanded [`<next>`](Element/run/regular/chain.md#next_limits) tag won't be affect by [match mode](Element/run/filter/find.md#match_mode).**
+**The [`<next>`](Element/run/regular/chain.md#next) tags macros expanded is just a way of expression. It's still affect by [`match mode`](Element/run/filter/find.md#match_mode) if apply directly.**
 
 <h2>Topology</h2>
 

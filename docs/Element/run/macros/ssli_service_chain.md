@@ -25,7 +25,7 @@ For `SSLi` service chain solution.
 
 **`<find>` tags set of `<encrypt_filter_id>`, `<decrypt_filter_id>` and `<dmz_filter_id>` must be mutually exclusive.**
 
-**The macros expanded [`<next>`](Element/run/regular/chain.md#next_limits) tag won't be affect by [match mode](Element/run/filter/find.md#match_mode).**
+**The [`<next>`](Element/run/regular/chain.md#next) tags macros expanded is just a way of expression. It's still affect by [`match mode`](Element/run/filter/find.md#match_mode) if apply directly.**
 
 <h2>Topology1(with DMZ)</h2>
 

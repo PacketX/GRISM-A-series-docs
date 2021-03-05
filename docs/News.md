@@ -14,7 +14,7 @@ News
 
 * [`Find name`](Element/run/filter/find.md#name): add `eth.bcast`, `eth.mcast`, `eth.mcastv6`, `vlan.dei`, `vlan.tci`, `mpls.label`, `mpls.tc`, `mpls.bottom`, `ip.mcast`, `ip.src_mcast`, `ip.fragment`, `ipv6.mcast_rsvd`, `ipv6.mcast_all_nodes`, `ipv6.mcast_all_rtrs`, `ipv6.mcast_sol_node`, `ipv6.mcast_flood`, `ipv6.mcast`, `mldv1`, `mldv2`, `ipv6.fragment`, `tcp.flags.[800]`, `tcp.flags.[400]`, `tcp.flags.[200]`, `tcp.flags.ns`, `tcp.flags.cwr`, `tcp.flags.ecn`, `tcp.flags.ece`, `tcp.flags.urg`, `tcp.flags.ack`, `tcp.flags.push`, `tcp.flags.psh`, `tcp.flags.reset`, `tcp.flags.rst`, `tcp.flags.syn`, `tcp.flags.fin` and `tcp.flags`.
 * [`Find combine`](Element/run/filter/find.md#combine): add `mDNS` and `LLMNR`.
-* Some [`<find>`](Element/run/filter/find.md) tags assign two type [`match mode`](Element/run/filter/find.md#match_mode) and [`not match mode`](Element/run/filter/find.md#match_mode).
+* Some [`<find>`](Element/run/filter/find.md) tags assign two type [`match mode`](Element/run/filter/find.md#match_mode) and [`none match mode`](Element/run/filter/find.md#match_mode).
 
 <h2>2021/02/19</h2>
 

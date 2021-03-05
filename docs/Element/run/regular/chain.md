@@ -55,7 +55,7 @@ If attribute `type` is `loadBalance`, there is couple limits:
 <fid>F1</fid>
 ```
 
-<h3>&lt;next&gt; Tag</h3>
+<h3 id="next">&lt;next&gt; Tag</h3>
 
 `<next>` tag described when if packet match or not match a filter actions that the continue tags.
 
@@ -67,7 +67,7 @@ If attribute `type` is `loadBalance`, there is couple limits:
 
 <h4 id="next_limits">&lt;next&gt; Limits</h4>
 
-If any filter is in match mode, there is no `<next>` tag can be used, whatever the filter is used or not. See [match mode](Element/run/filter/find.md#match_mode).
+If any filter is in `match mode`, there is no `<next>` tag can be used, whatever the filter is used or not. See [`match mode`](Element/run/filter/find.md#match_mode).
 
 <h4>&lt;next&gt; Tag Example</h4>
 
