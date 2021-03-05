@@ -238,6 +238,7 @@ The names basically still the same as above, but will be expanded as described.
 |    gtpv1_data   |      Is GTPv1 data channel     |                                         udp.port == 2152 or tcp.port == 2152                                         |
 |     diameter    |           Is Diameter          |                                         sctp.port == 3868 or tcp.port == 3868                                        |
 |       s1ap      |             Is S1AP            |                                                  sctp.port == 36412                                                  |
+|       x2ap      |             Is X2AP            |                                                  sctp.port == 36422                                                  |
 |       ngap      |             Is NGAP            |                                                  sctp.port == 38412                                                  |
 
 <h2 id="match_mode">Match mode</h2>
