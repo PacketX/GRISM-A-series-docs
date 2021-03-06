@@ -15,3 +15,4 @@ As you knew, the task is written in XML format, here is our element tags:
 		* [\<ptp\_e2etc\_transparent\>](Element/run/macros/ptp_e2etc_transparent.md)
 		* [\<mec\>](Element/run/macros/mec.md)
 		* [\<ssli\_service\_chain\>](Element/run/macros/ssli_service_chain.md)
+		* [\<en_dc\>](Element/run/macros/en_dc.md)

@@ -1,6 +1,10 @@
 News
 =========
 
+<h2>2021/03/06</h2>
+
+* [`<macros>`](Element/run/macros.md): add [`<en_dc>`](Element/run/macros/en_dc.md) tag for [`E-UTRA-NR - Dual Connectivity`](Element/run/macros/en_dc.md).
+
 <h2>2021/03/05</h2>
 
 * [`Find combine`](Element/run/filter/find.md#combine): add `X2AP`.

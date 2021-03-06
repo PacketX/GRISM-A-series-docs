@@ -51,10 +51,6 @@ For `MEC`(`Mobile Edge Computing`) solution.
 
 <macros>
 
-<ptp_e2etc_transparent>
-    <port>P49-52</port>
-</ptp_e2etc_transparent>
-
 <!-- 4G -->
 <mec>
     <cell_port>P49</cell_port>
@@ -101,14 +97,6 @@ For `MEC`(`Mobile Edge Computing`) solution.
 <!-- LBO: P1 -->
 <!-- no-LBO: P2 -->
 <!-- s1ap: P3 -->
-
-<macros>
-
-<ptp_e2etc_transparent>
-    <port>P49-52</port>
-</ptp_e2etc_transparent>
-
-</macros>
 
 <filter id="1">
 <or>
