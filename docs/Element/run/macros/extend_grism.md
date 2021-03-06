@@ -1,7 +1,7 @@
 Extend GRISM
 ============
 
-Behave as a GRISM extended physical ports.
+Behave as a `GRISM` extended physical ports.
 
 <h2>Child Elements</h2>
 
