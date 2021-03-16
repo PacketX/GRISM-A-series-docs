@@ -1,6 +1,10 @@
 News
 =========
 
+<h2>2021/03/16</h2>
+
+* [`<output>`](Element/run/output.md): add `<pop>` tag.
+
 <h2>2021/03/06</h2>
 
 * [`<macros>`](Element/run/macros.md): add [`<en_dc>`](Element/run/macros/en_dc.md) tag for [`E-UTRA-NR - Dual Connectivity`](Element/run/macros/en_dc.md).

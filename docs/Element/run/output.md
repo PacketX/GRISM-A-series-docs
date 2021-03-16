@@ -14,7 +14,8 @@ Output
 |  Eelment  |     Content    |         Description         | Must |           Note          |
 |:---------:|:--------------:|:---------------------------:|:----:|:-----------------------:|
 |    port   |      Ports     |  Physical ports for output  |  Yes |                         |
-| stripping |    See note    |        strip a header       |  No  | Accept keyword: `vlan`. |
+|    pop    |    See note    |         Pop a header        |  No  | Accept keyword: `vlan`. |
+| stripping |    See note    |      Strip all headers      |  No  | Accept keyword: `vlan`. |
 |     Q     | 0-4095 integer | Add or modify a VLAN header |  No  |                         |
 |    QinQ   | 0-4095 integer |      Push a VLAN header     |  No  |                         |
 
