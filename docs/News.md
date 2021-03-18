@@ -1,6 +1,10 @@
 News
 =========
 
+<h2>2021/03/18</h2>
+
+* [`<find>`](Element/run/filter/find.md): remove `mpls.label` and `mpls.bottom`.
+
 <h2>2021/03/16</h2>
 
 * [`<output>`](Element/run/output.md): add `<pop>` tag.
