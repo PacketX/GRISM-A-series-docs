@@ -9,7 +9,7 @@ Macros
 * [`Extend GRISM`](Element/run/macros/extend_grism.md)
 * [`PTP E2ETC Transparent`](Element/run/macros/ptp_e2etc_transparent.md)
 * [`MEC`](Element/run/macros/mec.md)
-* [`SSLi Service Chain`](Element/run/macros/ssli_service_chain.md)
+* [`SSLi Service Chain with Array`](Element/run/macros/ssli_service_chain_with_array.md)
 * [`E-UTRA-NR - Dual Connectivity`](Element/run/macros/en_dc.md)
 
 <h2>Example</h2>

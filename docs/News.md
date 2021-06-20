@@ -1,6 +1,10 @@
 News
 =========
 
+<h2>2021/06/20</h2>
+
+* [`<macros>`](Element/run/macros.md): rename [`<ssli_service_chain>`](Element/run/macros/ssli_service_chain_with_array.md) tag to [`<ssli_service_chain_with_array>`](Element/run/macros/ssli_service_chain_with_array.md) tag.
+
 <h2>2021/03/18</h2>
 
 * [`<find>`](Element/run/filter/find.md): remove `mpls.label` and `mpls.bottom`.

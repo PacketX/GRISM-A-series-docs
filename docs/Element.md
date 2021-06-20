@@ -14,5 +14,5 @@ As you knew, the task is written in XML format, here is our element tags:
 		* [`<extend_grism>`](Element/run/macros/extend_grism.md)
 		* [`<ptp_e2etc_transparent>`](Element/run/macros/ptp_e2etc_transparent.md)
 		* [`<mec>`](Element/run/macros/mec.md)
-		* [`<ssli_service_chain>`](Element/run/macros/ssli_service_chain.md)
+		* [`<ssli_service_chain_with_array>`](Element/run/macros/ssli_service_chain_with_array.md)
 		* [`<en_dc>`](Element/run/macros/en_dc.md)

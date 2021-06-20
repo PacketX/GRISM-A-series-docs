@@ -1,7 +1,7 @@
-SSLi Service Chain
+SSLi Service Chain with Array
 =============
 
-For `SSLi` service chain solution.
+For `Array SSLi` service chain solution.
 
 <h2>Child Elements</h2>
 
@@ -34,7 +34,7 @@ For `SSLi` service chain solution.
    | DMZ WAN |               | WAN |
    +----+----+               +--+--+
         | P2                    | P10
-    +---+-----------------------+---+               SSLi
+    +---+-----------------------+---+            Array SSLi
     |                               |  WAN P6  +-------------+
     |                               +----------+             |
     |                               +----------+             |
@@ -65,7 +65,7 @@ For `SSLi` service chain solution.
 <run>
 
 <macros>
-    <ssli_service_chain>
+    <ssli_service_chain_with_array>
         <lan_port>P9</lan_port>
         <wan_port>P10</wan_port>
         <service_chain_lan_port>P3</service_chain_lan_port>
@@ -79,7 +79,7 @@ For `SSLi` service chain solution.
         <dmz_lan_port>P1</dmz_lan_port>
         <dmz_wan_port>P2</dmz_wan_port>
         <dmz_filter_id>F3</dmz_filter_id>
-    </ssli_service_chain>
+    </ssli_service_chain_with_array>
 </macros>
 
 <filter id="1">
@@ -139,7 +139,7 @@ For `SSLi` service chain solution.
 
 <regular>
 
-<!-- LAN to SSLi or service chain LAN -->
+<!-- LAN to Array SSLi or service chain LAN -->
 <chain>
     <in>P9</in>
     <fid>F3</fid>
@@ -153,7 +153,7 @@ For `SSLi` service chain solution.
     </next>
 </chain>
 
-<!-- WAN to SSLi or service chain WAN -->
+<!-- WAN to Array SSLi or service chain WAN -->
 <chain>
     <in>P10</in>
     <fid>F1</fid>
@@ -195,7 +195,7 @@ For `SSLi` service chain solution.
     <out>P4</out>
 </chain>
 
-<!-- Service chain LAN to SSLi or DMZ LAN or LAN -->
+<!-- Service chain LAN to Array SSLi or DMZ LAN or LAN -->
 <chain>
     <in>P3</in>
     <fid>F3</fid>
@@ -213,7 +213,7 @@ For `SSLi` service chain solution.
     </next>
 </chain>
 
-<!-- Service chain WAN to SSLi or DMZ WAN or WAN -->
+<!-- Service chain WAN to Array SSLi or DMZ WAN or WAN -->
 <chain>
     <in>P4</in>
     <fid>F3</fid>
@@ -243,7 +243,7 @@ For `SSLi` service chain solution.
                  | WAN |
                  +--+--+
                     | P10
-    +---------------+---------------+               SSLi
+    +---------------+---------------+            Array SSLi
     |                               |  WAN P6  +-------------+
     |                               +----------+             |
     |                               +----------+             |
@@ -274,7 +274,7 @@ For `SSLi` service chain solution.
 <run>
 
 <macros>
-    <ssli_service_chain>
+    <ssli_service_chain_with_array>
         <lan_port>P9</lan_port>
         <wan_port>P10</wan_port>
         <service_chain_lan_port>P3</service_chain_lan_port>
@@ -285,7 +285,7 @@ For `SSLi` service chain solution.
         <onload_wan_port>P6</onload_wan_port>
         <encrypt_filter_id>F1</encrypt_filter_id>
         <decrypt_filter_id>F2</decrypt_filter_id>
-    </ssli_service_chain>
+    </ssli_service_chain_with_array>
 </macros>
 
 <filter id="1">
@@ -332,7 +332,7 @@ For `SSLi` service chain solution.
 
 <regular>
 
-<!-- LAN to SSLi or service chain LAN -->
+<!-- LAN to Array SSLi or service chain LAN -->
 <chain>
     <in>P9</in>
     <fid>F3</fid>
@@ -346,7 +346,7 @@ For `SSLi` service chain solution.
     </next>
 </chain>
 
-<!-- WAN to SSLi or service chain WAN -->
+<!-- WAN to Array SSLi or service chain WAN -->
 <chain>
     <in>P10</in>
     <fid>F1</fid>
@@ -376,7 +376,7 @@ For `SSLi` service chain solution.
     <out>P4</out>
 </chain>
 
-<!-- Service chain LAN to SSLi or LAN -->
+<!-- Service chain LAN to Array SSLi or LAN -->
 <chain>
     <in>P3</in>
     <fid>F2</fid>
@@ -386,7 +386,7 @@ For `SSLi` service chain solution.
     </next>
 </chain>
 
-<!-- Service chain WAN to SSLi or WAN -->
+<!-- Service chain WAN to Array SSLi or WAN -->
 <chain>
     <in>P4</in>
     <fid>F2</fid>
