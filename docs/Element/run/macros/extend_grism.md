@@ -13,11 +13,11 @@ Behave as a `GRISM` extended physical ports.
 
 <h3>&lt;in&gt; Tag</h3>
 
-`<in>` tag described what physical port used as input. Port number start with prefix `P` and port number can be formatted as range.  Multiple input port separated by ` ,`.
+`<in>` tag described what physical port used as input. Port number start with prefix `P` and port number can be formatted as range.  Multiple input port separated by `, `.
 
 <h3>&lt;out&gt; Tag</h3>
 
-`<out>` tag described what physical port used as output. Port number start with prefix `P` and port number can be formatted as range.  Multiple output port separated by ` ,`.
+`<out>` tag described what physical port used as output. Port number start with prefix `P` and port number can be formatted as range.  Multiple output port separated by `, `.
 
 <h2>Topology</h2>
 

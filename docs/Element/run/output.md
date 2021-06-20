@@ -21,7 +21,7 @@ Output
 
 <h3>&lt;port&gt; Tag</h3>
 
-`<port>` tag described what physical port used as output. Port number start with prefix `P` and port number can be formatted as range. Multiple output port separated by ` ,`.
+`<port>` tag described what physical port used as output. Port number start with prefix `P` and port number can be formatted as range. Multiple output port separated by `, `.
 
 <h4>&lt;port&gt; Tag Example</h4>
 
