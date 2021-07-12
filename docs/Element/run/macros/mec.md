@@ -5,18 +5,30 @@ For `MEC`(`Mobile Edge Computing`) solution.
 
 <h2>Child Elements</h2>
 
-|      Eelment     |  Content  |              Description              | Must | Note |
-|:----------------:|:---------:|:-------------------------------------:|:----:|:----:|
-|     cell_port    |    Port   |      Physical port close to cell      |  Yes |      |
-|     core_port    |    Port   |      Physical port close to core      |  Yes |      |
-|     lbo_port     |    Port   |    Physical port for local breakout   |  Yes |      |
-|  not\_lbo\_port  |    Port   |  Physical port for non-local breakout |  Yes |      |
-|     s1ap_port    |    Port   | Physical port for S1AP packets mirror |  No  |      |
-| cell\_filter\_id | Filter ID |  Filter ID to determine cell datapath |  No  |      |
+|      Eelment     |  Content  |                   Description                   | Must | Note |
+|:----------------:|:---------:|:-----------------------------------------------:|:----:|:----:|
+|     cell_port    |    Port   |           Physical port close to cell           |  Yes |      |
+|     core_port    |    Port   |           Physical port close to core           |  Yes |      |
+|     lbo_port     |    Port   |         Physical port for local breakout        |  Yes |      |
+|  not\_lbo\_port  |    Port   |       Physical port for non-local breakout      |  Yes |      |
+|     s1ap_port    |    Port   | Physical port for S1AP packets mirror or inline |  No  |      |
+| cell\_filter\_id | Filter ID |       Filter ID to determine cell datapath      |  No  |      |
 
 **If `<s1ap_port>` tag is not set, it will be act as 5G environment.**
 
 **The [`<next>`](Element/run/regular/chain.md#next) tags macros expanded is just a way of expression. It's still affect by [`match mode`](Element/run/filter/find.md#match_mode) if apply directly.**
+
+<h3>&lt;s1ap_port&gt; Tag</h3>
+
+| Attribute |             Description            |                Type               | Must |
+|:---------:|:----------------------------------:|:---------------------------------:|:----:|
+|   active  | Behaving mirror, inline or nothing | 'none', 'mirror', 'inline' string |  No  |
+
+<h4>&lt;active&gt; Defaults Priority</h4>
+
+1. If `<s1ap_port>` is empty and `active` has no attribute: `none`.
+2. If `<s1ap_port>` is not empty and `active` has no attribute: `mirror`.
+3. Last: invalid.
 
 <h2>Topology</h2>
 
@@ -24,7 +36,7 @@ For `MEC`(`Mobile Edge Computing`) solution.
    +---------+         +---------+
    | 4G Cell |         | 5G Cell |
    +----+----+         +----+----+
-        | P49               | P51
+        | P25               | P27
     +---+-------------------+---+            +-------------+
     |                           |   LBO P1   |             |
     |                           +------------+             |
@@ -38,7 +50,7 @@ For `MEC`(`Mobile Edge Computing`) solution.
     |                           |            +-------------+
     |                           |
     +---+-------------------+---+
-        | P50               | P52
+        | P26               | P28
    +----+----+         +----+----+
    | 4G Core |         | 5G Core |
    +---------+         +---------+
@@ -53,18 +65,18 @@ For `MEC`(`Mobile Edge Computing`) solution.
 
 <!-- 4G -->
 <mec>
-    <cell_port>P49</cell_port>
-    <core_port>P50</core_port>
+    <cell_port>P25</cell_port>
+    <core_port>P26</core_port>
     <lbo_port>P1</lbo_port>
     <not_lbo_port>P2</not_lbo_port>
-    <s1ap_port>P3</s1ap_port>
+    <s1ap_port "active"="mirror">P3</s1ap_port>
     <cell_filter_id>F1</cell_filter_id>
 </mec>
 
 <!-- 5G -->
 <mec>
-    <cell_port>P51</cell_port>
-    <core_port>P52</core_port>
+    <cell_port>P27</cell_port>
+    <core_port>P28</core_port>
     <lbo_port>P1</lbo_port>
     <not_lbo_port>P2</not_lbo_port>
     <cell_filter_id>F2</cell_filter_id>
@@ -92,8 +104,8 @@ For `MEC`(`Mobile Edge Computing`) solution.
 ```
 <run>
 
-<!-- 4G: P49, P50 -->
-<!-- 5G: P51, P52 -->
+<!-- 4G: P25, P26 -->
+<!-- 5G: P27, P28 -->
 <!-- LBO: P1 -->
 <!-- no-LBO: P2 -->
 <!-- s1ap: P3 -->
@@ -126,40 +138,40 @@ For `MEC`(`Mobile Edge Computing`) solution.
 
 <!-- 4G -->
 <chain>
-    <in>P49</in>
+    <in>P25</in>
     <fid>F3</fid>
     <out>P1</out>
     <next type="notmatch">
         <fid>F4</fid>
-        <out>P3, P50</out>
+        <out>P3, P26</out>
         <next type="notmatch">
-            <out>P50</out>
+            <out>P26</out>
         </next>
     </next>
 </chain>
 
 <chain>
-    <in>P50</in>
+    <in>P26</in>
     <fid>F4</fid>
-    <out>P3, P49</out>
+    <out>P3, P25</out>
     <next type="notmatch">
-        <out>P49</out>
+        <out>P25</out>
     </next>
 </chain>
 
 <!-- 5G -->
 <chain>
-    <in>P51</in>
+    <in>P27</in>
     <fid>F3</fid>
     <out>P1</out>
     <next type="notmatch">
-        <out>P52</out>
+        <out>P28</out>
     </next>
 </chain>
 
 <chain>
-    <in>P52</in>
-    <out>P51</out>
+    <in>P28</in>
+    <out>P27</out>
 </chain>
 
 <!-- LBO -->
@@ -167,11 +179,11 @@ For `MEC`(`Mobile Edge Computing`) solution.
     <in>P1</in>
     <next>
         <fid>F1</fid>
-        <out>P49</out>
+        <out>P25</out>
     </next>
     <next>
         <fid>F2</fid>
-        <out>P51</out>
+        <out>P27</out>
     </next>
 </chain>
 
@@ -180,11 +192,11 @@ For `MEC`(`Mobile Edge Computing`) solution.
     <in>P2</in>
     <next>
         <fid>F1</fid>
-        <out>P50</out>
+        <out>P26</out>
     </next>
     <next>
         <fid>F2</fid>
-        <out>P52</out>
+        <out>P28</out>
     </next>
 </chain>
 

@@ -1,6 +1,10 @@
 News
 =========
 
+<h2>2021/07/12</h2>
+
+* [`<macros>`](Element/run/macros.md): `<s1ap_port>` tag add `active` attribute in [`<mec>`](Element/run/macros/mec.md) tag.
+
 <h2>2021/06/20</h2>
 
 * [`<macros>`](Element/run/macros.md): rename [`<ssli_service_chain>`](Element/run/macros/ssli_service_chain_with_array.md) tag to [`<ssli_service_chain_with_array>`](Element/run/macros/ssli_service_chain_with_array.md) tag.
