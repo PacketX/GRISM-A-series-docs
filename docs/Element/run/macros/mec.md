@@ -20,7 +20,7 @@ For `MEC`(`Mobile Edge Computing`) solution.
 
 **If `<s1ap_ports>` tag is not set, it will be act as 5G environment.**
 
-`<s1ap_ports>` tag described what physical port used for S1AP packets mirror or inline. Port number start with prefix `P` and port number can be formatted as range. Multiple output port separated by `, `.
+`<s1ap_ports>` tag described what physical ports used for S1AP packets mirror or inline. Port number start with prefix `P` and port number can be formatted as range. Multiple output ports separated by `, `.
 
 | Attribute |             Description            |                Type               | Must |
 |:---------:|:----------------------------------:|:---------------------------------:|:----:|

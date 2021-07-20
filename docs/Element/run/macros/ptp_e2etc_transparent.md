@@ -13,7 +13,7 @@ Enable the `PTP` `E2ETC` function on interfaces and  forward the `PTP` packets d
 
 <h3>&lt;port&gt; Tag</h3>
 
-`<port>` tag described what physical ports to transparent PTP packets. Port number start with prefix `P` and port number can be formatted as range. Multiple  port separated by `, `.
+`<port>` tag described what physical ports to transparent PTP packets. Port number start with prefix `P` and port number can be formatted as range. Multiple  ports separated by `, `.
 
 <h2>Example</h2>
 
