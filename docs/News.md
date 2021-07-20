@@ -4,6 +4,7 @@ News
 <h2>2021/07/21</h2>
 
 * [`<macros>`](Element/run/macros.md): `<s1ap_port>` tag rename to `<s1ap_ports>` tag and support multiple output ports.
+* [`<macros>`](Element/run/macros.md): add `<s1ap_extra_ports>` tag.
 
 <h2>2021/07/12</h2>
 
