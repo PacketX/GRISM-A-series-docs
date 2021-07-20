@@ -5,20 +5,22 @@ For `MEC`(`Mobile Edge Computing`) solution.
 
 <h2>Child Elements</h2>
 
-|      Eelment     |  Content  |                   Description                   | Must | Note |
-|:----------------:|:---------:|:-----------------------------------------------:|:----:|:----:|
-|     cell_port    |    Port   |           Physical port close to cell           |  Yes |      |
-|     core_port    |    Port   |           Physical port close to core           |  Yes |      |
-|     lbo_port     |    Port   |         Physical port for local breakout        |  Yes |      |
-|  not\_lbo\_port  |    Port   |       Physical port for non-local breakout      |  Yes |      |
-|     s1ap_port    |    Port   | Physical port for S1AP packets mirror or inline |  No  |      |
-| cell\_filter\_id | Filter ID |       Filter ID to determine cell datapath      |  No  |      |
-
-**If `<s1ap_port>` tag is not set, it will be act as 5G environment.**
+|      Eelment     |  Content  |                    Description                   | Must | Note |
+|:----------------:|:---------:|:------------------------------------------------:|:----:|:----:|
+|     cell_port    |    Port   |            Physical port close to cell           |  Yes |      |
+|     core_port    |    Port   |            Physical port close to core           |  Yes |      |
+|     lbo_port     |    Port   |         Physical port for local breakout         |  Yes |      |
+|  not\_lbo\_port  |    Port   |       Physical port for non-local breakout       |  Yes |      |
+|    s1ap_ports    |    Port   | Physical ports for S1AP packets mirror or inline |  No  |      |
+| cell\_filter\_id | Filter ID |       Filter ID to determine cell datapath       |  No  |      |
 
 **The [`<next>`](Element/run/regular/chain.md#next) tags macros expanded is just a way of expression. It's still affect by [`match mode`](Element/run/filter/find.md#match_mode) if apply directly.**
 
-<h3>&lt;s1ap_port&gt; Tag</h3>
+<h3>&lt;s1ap_ports&gt; Tag</h3>
+
+**If `<s1ap_ports>` tag is not set, it will be act as 5G environment.**
+
+`<s1ap_ports>` tag described what physical port used for S1AP packets mirror or inline. Port number start with prefix `P` and port number can be formatted as range. Multiple output port separated by `, `.
 
 | Attribute |             Description            |                Type               | Must |
 |:---------:|:----------------------------------:|:---------------------------------:|:----:|
@@ -26,8 +28,8 @@ For `MEC`(`Mobile Edge Computing`) solution.
 
 <h4>&lt;active&gt; Defaults Priority</h4>
 
-1. If `<s1ap_port>` is empty and `active` has no attribute: `none`.
-2. If `<s1ap_port>` is not empty and `active` has no attribute: `mirror`.
+1. If `<s1ap_ports>` is empty and `active` has no attribute: `none`.
+2. If `<s1ap_ports>` is not empty and `active` has no attribute: `mirror`.
 3. Last: invalid.
 
 <h2>Topology</h2>
