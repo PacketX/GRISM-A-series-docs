@@ -9,8 +9,8 @@ For `MEC`(`Mobile Edge Computing`) solution.
 |:------------------:|:---------:|:------------------------------------------------:|:----:|:----:|
 |      cell_port     |    Port   |            Physical port close to cell           |  Yes |      |
 |      core_port     |    Port   |            Physical port close to core           |  Yes |      |
-|      lbo_port      |    Port   |         Physical port for local breakout         |  Yes |      |
-|   not\_lbo\_port   |    Port   |       Physical port for non-local breakout       |  Yes |      |
+|      lbo_ports     |    Port   |         Physical ports for local breakout        |  Yes |      |
+|   not\_lbo\_ports  |    Port   |       Physical ports for non-local breakout      |  Yes |      |
 |     s1ap_ports     |   Ports   | Physical ports for S1AP packets mirror or inline |  No  |      |
 | s1ap\_extra\_ports |   Ports   |   Extra physical ports for S1AP packets mirror   |  No  |      |
 |  cell\_filter\_id  | Filter ID |       Filter ID to determine cell datapath       |  No  |      |

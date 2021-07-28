@@ -1,6 +1,11 @@
 News
 =========
 
+<h2>2021/07/28</h2>
+
+* [`<macros>`](Element/run/macros.md): `<lbo_port>` tag rename to `<lbo_ports>` tag and support multiple output ports.
+* [`<macros>`](Element/run/macros.md): `<not_lbo_port>` tag rename to `<not_lbo_ports>` tag and support multiple output ports.
+
 <h2>2021/07/21</h2>
 
 * [`<macros>`](Element/run/macros.md): `<s1ap_port>` tag rename to `<s1ap_ports>` tag and support multiple output ports.
