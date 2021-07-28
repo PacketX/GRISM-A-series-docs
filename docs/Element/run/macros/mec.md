@@ -76,8 +76,8 @@ For `MEC`(`Mobile Edge Computing`) solution.
 <mec>
     <cell_port>P25</cell_port>
     <core_port>P26</core_port>
-    <lbo_port>P1</lbo_port>
-    <not_lbo_port>P2</not_lbo_port>
+    <lbo_ports>P1</lbo_ports>
+    <not_lbo_ports>P2</not_lbo_ports>
     <s1ap_port "active"="mirror">P3</s1ap_port>
     <cell_filter_id>F1</cell_filter_id>
 </mec>
@@ -86,8 +86,8 @@ For `MEC`(`Mobile Edge Computing`) solution.
 <mec>
     <cell_port>P27</cell_port>
     <core_port>P28</core_port>
-    <lbo_port>P1</lbo_port>
-    <not_lbo_port>P2</not_lbo_port>
+    <lbo_ports>P1</lbo_ports>
+    <not_lbo_ports>P2</not_lbo_ports>
     <cell_filter_id>F2</cell_filter_id>
 </mec>
 
