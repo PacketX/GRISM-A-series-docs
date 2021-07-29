@@ -1,6 +1,10 @@
 News
 =========
 
+<h2>2021/07/29</h2>
+
+* [`<macros>`](Element/run/macros.md): change the default befavior of `<lbo_ports>` tag and `<not_lbo_port>` tag.
+
 <h2>2021/07/28</h2>
 
 * [`<macros>`](Element/run/macros.md): `<lbo_port>` tag rename to `<lbo_ports>` tag and support multiple output ports.

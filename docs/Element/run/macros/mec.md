@@ -17,6 +17,10 @@ For `MEC`(`Mobile Edge Computing`) solution.
 
 **The [`<next>`](Element/run/regular/chain.md#next) tags macros expanded is just a way of expression. It's still affect by [`match mode`](Element/run/filter/find.md#match_mode) if apply directly.**
 
+<h3>&lt;lbo_ports&gt; Tag and &lt;not_lbo_ports&gt; Tag</h3>
+
+If the content of the two tags has multiple ports, the first one will be active port and remains will be stand-by ports.
+
 <h3>&lt;s1ap_ports&gt; Tag</h3>
 
 **If `<s1ap_ports>` tag is not set, it will be act as 5G environment.**
