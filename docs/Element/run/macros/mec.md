@@ -25,7 +25,7 @@ If the content of the two tags has multiple ports, the first one will be active 
 
 **If `<s1ap_ports>` tag is not set, it will be act as 5G environment.**
 
-`<s1ap_ports>` tag described what physical ports used for S1AP packets mirror or inline. Port number start with prefix `P` and port number can be formatted as range. Multiple output ports separated by `, `.
+`<s1ap_ports>` tag described what physical ports used for S1AP packets mirror or inline. Port number start with prefix `P` and port number can be formatted as range. Multiple output ports separated by `, `. Breakout port has suffix `_1` to `_4`, `_all` as all sub-ports.
 
 | Attribute |             Description            |                Type               | Must |
 |:---------:|:----------------------------------:|:---------------------------------:|:----:|
@@ -82,7 +82,7 @@ If the content of the two tags has multiple ports, the first one will be active 
     <core_port>P26</core_port>
     <lbo_ports>P1</lbo_ports>
     <not_lbo_ports>P2</not_lbo_ports>
-    <s1ap_port "active"="mirror">P3</s1ap_port>
+    <s1ap_ports "active"="mirror">P3</s1ap_ports>
     <cell_filter_id>F1</cell_filter_id>
 </mec>
 

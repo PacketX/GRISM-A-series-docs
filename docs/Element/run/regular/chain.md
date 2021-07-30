@@ -14,17 +14,17 @@ Chain
 
 <h3>&lt;in&gt; Tag</h3>
 
-`<in>` tag described what physical ports used as input. Port number start with prefix `P` and port number can be formatted as range. `any` means any port. Multiple input ports separated by `, `.
+`<in>` tag described what physical ports used as input. Port number start with prefix `P` and port number can be formatted as range. `any` means any port. Multiple input ports separated by `, `. Breakout port has suffix `_1` to `_4`, `_all` as all sub-ports.
 
 <h4>&lt;in&gt; Tag Example</h4>
 
 ```
-<in>P1, P5, P10-15</in>
+<in>P1, P5, P10-15, P20_1, P20_2, P24_all</in>
 ```
 
 <h3>&lt;out&gt; Tag</h3>
 
-`<out>` tag described what physical ports or [`<output>`](Element/run/output.md) tag used as output. Port number start with prefix `P` and port number can be formatted as range. `0` and `drop` means drop packets. Multiple output ports separated by `, `.
+`<out>` tag described what physical ports or [`<output>`](Element/run/output.md) tag used as output. Port number start with prefix `P` and port number can be formatted as range. `0` and `drop` means drop packets. Multiple output ports separated by `, `. Breakout port has suffix `_1` to `_4`, `_all` as all sub-ports.
 
 | Attribute |  Description  |                 Type                | Must |
 |:---------:|:-------------:|:-----------------------------------:|:----:|
@@ -42,7 +42,7 @@ If attribute `type` is `loadBalance`, there is couple limits:
 <h4>&lt;out&gt; Tag Example</h4>
 
 ```
-<out>P1, P5, P10-15, O1, O3, O5-7</out>
+<out>P1, P5, P10-15, P20_1, P20_2, P24_all, O1, O3, O5-7</out>
 ```
 
 <h3>&lt;fid&gt; Tag</h3>

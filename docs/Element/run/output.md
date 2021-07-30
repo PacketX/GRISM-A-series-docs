@@ -21,12 +21,12 @@ Output
 
 <h3>&lt;port&gt; Tag</h3>
 
-`<port>` tag described what physical ports used as output. Port number start with prefix `P` and port number can be formatted as range. Multiple output ports separated by `, `.
+`<port>` tag described what physical ports used as output. Port number start with prefix `P` and port number can be formatted as range. Multiple output ports separated by `, `. Breakout port has suffix `_1` to `_4`, `_all` as all sub-ports.
 
 <h4>&lt;port&gt; Tag Example</h4>
 
 ```
-<port>P1, P5, P10-15</port>
+<port>P1, P5, P10-15, P20_1, P20_2, P24_all</port>
 ```
 
 <h3>&lt;Q&gt; Tag Attribute</h3>
