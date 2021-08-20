@@ -5,9 +5,9 @@ Set port link state.
 
 <h2>Child Element</h2>
 
-|    Eelment   | Content |              Description              | Must | Note |
-|:------------:|:-------:|:-------------------------------------:|:----:|:----:|
-| disable_port |  Ports  | Physical ports that permanent disable |  Yes |      |
+|    Eelment    | Content |              Description              | Must | Note |
+|:-------------:|:-------:|:-------------------------------------:|:----:|:----:|
+| disable_ports |  Ports  | Physical ports that permanent disable |  Yes |      |
 
 <h3>&lt;port&gt; Tag</h3>
 
@@ -21,7 +21,7 @@ Set port link state.
 <macros>
 
 <link_state>
-    <disable_port>P1, P2</disable_port>
+    <disable_ports>P1, P2</disable_ports>
 </link_state>
 
 </macros>

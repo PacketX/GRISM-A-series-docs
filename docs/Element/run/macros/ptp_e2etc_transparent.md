@@ -7,7 +7,7 @@ Enable the `PTP` `E2ETC` function on interfaces and  forward the `PTP` packets d
 
 | Eelment | Content |                Description                | Must | Note |
 |:-------:|:-------:|:-----------------------------------------:|:----:|:----:|
-|   port  |  Ports  | Physical ports to transparent PTP packets |  Yes |      |
+|  ports  |  Ports  | Physical ports to transparent PTP packets |  Yes |      |
 
 **Once configured ports, it needs to add chains(or other datapath) to forward packets.**
 
@@ -23,7 +23,7 @@ Enable the `PTP` `E2ETC` function on interfaces and  forward the `PTP` packets d
 <macros>
 
 <ptp_e2etc_transparent>
-    <port>P1, P2</port>
+    <ports>P1, P2</ports>
 </ptp_e2etc_transparent>
 
 </macros>
