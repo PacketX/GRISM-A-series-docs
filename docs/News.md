@@ -1,6 +1,10 @@
 News
 =========
 
+<h2>2021/08/21</h2>
+
+* [`<macros>`](Element/run/macros.md): add [`<link_state>`](Element/run/macros/link_state.md) tag for [`Link State`](Element/run/macros/link_state.md).
+
 <h2>2021/07/30</h2>
 
 * Multiple ports argument accepts breakout port format.

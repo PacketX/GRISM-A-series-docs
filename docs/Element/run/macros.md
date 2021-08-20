@@ -11,6 +11,7 @@ Macros
 * [`MEC`](Element/run/macros/mec.md)
 * [`SSLi Service Chain with Array`](Element/run/macros/ssli_service_chain_with_array.md)
 * [`E-UTRA-NR - Dual Connectivity`](Element/run/macros/en_dc.md)
+* [`Link State`](Element/run/macros/link_state.md)
 
 <h2>Example</h2>
 
