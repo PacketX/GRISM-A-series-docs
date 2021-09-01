@@ -11,7 +11,9 @@ Filter
 
 <h2>Condition</h2>
 
-`<or>` tag is the only child element of `<filter>` tag.
+`<or>` tag or `<and>` tag is the only child element of `<filter>` tag.
+
+**If the filter conditions in `<and>` has no flows, it will be treated as an error.**
 
 <h2>Example</h2>
 

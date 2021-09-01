@@ -1,6 +1,10 @@
 News
 =========
 
+<h2>2021/09/01</h2>
+
+* [`<filter>`](Element/run/filter.md): add `<and>` tag support.
+
 <h2>2021/08/21</h2>
 
 * [`<macros>`](Element/run/macros.md): add [`<link_state>`](Element/run/macros/link_state.md) tag for [`Link State`](Element/run/macros/link_state.md).
