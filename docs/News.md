@@ -5,6 +5,7 @@ News
 
 * [`<filter>`](Element/run/filter.md): add `<and>` tag support.
 * [`<fid>`](Element/run/regular/chain.md): add `type` attribute.
+* [`<find>`](Element/run/filter/find.md): add `slow_protocol` and `vrrp`.
 
 <h2>2021/08/21</h2>
 
