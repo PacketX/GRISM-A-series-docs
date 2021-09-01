@@ -47,12 +47,18 @@ If attribute `type` is `loadBalance`, there is couple limits:
 
 <h3>&lt;fid&gt; Tag</h3>
 
-`<fid>` tag described what [`<filter>`](Element/run/filter.md) to use, one filter id only.
+`<fid>` tag described what [`<filter>`](Element/run/filter.md) to use, multiple filter id is acceptable.
+
+| Attribute |      Description      |         Type         | Must |
+|:---------:|:---------------------:|:--------------------:|:----:|
+|    type   | How to combine filter | 'or' or 'and' string |  No  |
+
+**If attribute `type` is not specified, `or` is chosen.**
 
 <h4>&lt;fid&gt; Tag Example</h4>
 
 ```
-<fid>F1</fid>
+<fid type="and">F1, F2</fid>
 ```
 
 <h3 id="next">&lt;next&gt; Tag</h3>
