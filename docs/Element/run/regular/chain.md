@@ -14,7 +14,7 @@ Chain
 
 <h3>&lt;in&gt; Tag</h3>
 
-`<in>` tag described what physical ports used as input. Port number start with prefix `P` and port number can be formatted as range. `any` means any port. Multiple input ports separated by `, `. Breakout port has suffix `_1` to `_4`, `_all` as all sub-ports.
+`<in>` tag described what physical ports used as input. Port number start with prefix `P` and port number can be formatted as range. Multiple input ports separated by `, `. Breakout port has suffix `_1` to `_4`, `_all` as all sub-ports.
 
 <h4>&lt;in&gt; Tag Example</h4>
 
@@ -37,7 +37,8 @@ Chain
 If attribute `type` is `loadBalance`, there is couple limits:
 
 1. Cannot use [`<output>`](Element/run/output.md) tag as an output, which mean: O1, O2 is an invalid output port in this situation.
-2. The maximum of member ports is `8`.
+2. The maximum number of member ports is `8`.
+3. The maximum number of `<out type="loadBalance">` tags is `48`.
 
 <h4>&lt;out&gt; Tag Example</h4>
 
