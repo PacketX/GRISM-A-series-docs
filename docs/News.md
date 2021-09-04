@@ -1,6 +1,11 @@
 News
 =========
 
+<h2>2021/09/04</h2>
+
+* [`<chain>`](Element/run/regular/chain.md): redefine `<next>` tag behavior.
+* [`<out>`](Element/run/regular/chain.md): `type` attribute add `fastFailover`.
+
 <h2>2021/09/01</h2>
 
 * [`<filter>`](Element/run/filter.md): add `<and>` tag support.

@@ -5,12 +5,10 @@ Chain
 
 <h2>Child Elements</h2>
 
-| Eelment |  Content  |               Description              | Must | Note |
-|:-------:|:---------:|:--------------------------------------:|:----:|:----:|
-|    in   |   Ports   |        Physical ports for input        |  Yes |      |
-|   out   |   Ports   | Physical ports or output ID for output |  Yes |      |
-|   fid   | Filter ID |                Filter ID               |  No  |      |
-|   next  | See below |         Continue chain content         |  No  |      |
+| Eelment |  Content  |          Description         | Must | Note |
+|:-------:|:---------:|:----------------------------:|:----:|:----:|
+|    in   |   Ports   |   Physical ports for input   |  Yes |      |
+|   next  | See below | Packet match priority tables |  Yes |      |
 
 <h3>&lt;in&gt; Tag</h3>
 
@@ -22,31 +20,22 @@ Chain
 <in>P1, P5, P10-15, P20_1, P20_2, P24_all</in>
 ```
 
-<h3>&lt;out&gt; Tag</h3>
+<h3 id="next">&lt;next&gt; Tag</h3>
 
-`<out>` tag described what physical ports or [`<output>`](Element/run/output.md) tag used as output. Port number start with prefix `P` and port number can be formatted as range. `0` and `drop` means drop packets. Multiple output ports separated by `, `. Breakout port has suffix `_1` to `_4`, `_all` as all sub-ports.
+`<next>` tag described what the packet match priority tables. The depth it is, the priority lower it gets.
 
-| Attribute |  Description  |                 Type                | Must |
-|:---------:|:-------------:|:-----------------------------------:|:----:|
-|    type   | How to output | 'duplicate' or 'loadBalance' string |  No  |
+<h4>Child Elements</h4>
 
-**If attribute `type` is not specified, `duplicate` is chosen.**
+| Eelment |  Content  |               Description              | Must | Note |
+|:-------:|:---------:|:--------------------------------------:|:----:|:----:|
+|   fid   | Filter ID |                Filter ID               |  No  |      |
+|   out   |   Ports   | Physical ports or output ID for output |  Yes |      |
 
-<h4>&lt;out&gt; Limits</h4>
+<h4 id="next_limits">&lt;next&gt; Limits</h4>
 
-If attribute `type` is `loadBalance`, there is couple limits:
+If any filter is in `match mode`, there is only one `<next>` tag can be used, whatever the filter is used or not. See [`match mode`](Element/run/filter/find.md#match_mode).
 
-1. Cannot use [`<output>`](Element/run/output.md) tag as an output, which mean: O1, O2 is an invalid output port in this situation.
-2. The maximum number of member ports is `8`.
-3. The maximum number of `<out type="loadBalance">` tags is `48`.
-
-<h4>&lt;out&gt; Tag Example</h4>
-
-```
-<out>P1, P5, P10-15, P20_1, P20_2, P24_all, O1, O3, O5-7</out>
-```
-
-<h3>&lt;fid&gt; Tag</h3>
+<h5>&lt;fid&gt; Tag</h5>
 
 `<fid>` tag described what [`<filter>`](Element/run/filter.md) to use, multiple filter id is acceptable.
 
@@ -56,37 +45,52 @@ If attribute `type` is `loadBalance`, there is couple limits:
 
 **If attribute `type` is not specified, `or` is chosen.**
 
-<h4>&lt;fid&gt; Tag Example</h4>
+<h5>&lt;fid&gt; Tag Example</h5>
 
 ```
 <fid type="and">F1, F2</fid>
 ```
 
-<h3 id="next">&lt;next&gt; Tag</h3>
+<h5>&lt;out&gt; Tag</h5>
 
-`<next>` tag described when if packet match or not match a filter actions that the continue tags.
+`<out>` tag described what physical ports or [`<output>`](Element/run/output.md) tag used as output. Port number start with prefix `P` and port number can be formatted as range. `0` and `drop` means drop packets. Multiple output ports separated by `, `. Breakout port has suffix `_1` to `_4`, `_all` as all sub-ports.
 
-| Attribute |           Description          |             Type             | Must |
-|:---------:|:------------------------------:|:----------------------------:|:----:|
-|    type   | What condition of \<next\> tag | 'match' or 'notmatch' string |  No  |
+| Attribute |  Description  |                         Type                        | Must |
+|:---------:|:-------------:|:---------------------------------------------------:|:----:|
+|    type   | How to output | 'duplicate', 'loadBalance' or 'fastFailover' string |  No  |
 
-**If attribute `type` is not specified, `match` is chosen.**
+`duplicate` will flood packets to all output ports. `loadBalance` will do load blance by 5-tuple to selected ports. `fastFailover` will send packet to first output port, if link down then try next output port.
 
-<h4 id="next_limits">&lt;next&gt; Limits</h4>
+**If attribute `type` is not specified, `duplicate` is chosen.**
 
-If any filter is in `match mode`, there is no `<next>` tag can be used, whatever the filter is used or not. See [`match mode`](Element/run/filter/find.md#match_mode).
+<h5>&lt;out&gt; Limits</h5>
+
+If attribute `type` is `loadBalance`, there is couple limits:
+
+1. Cannot use [`<output>`](Element/run/output.md) tag as an output, which mean: O1, O2 is an invalid output port in this situation.
+2. The maximum number of member ports is `8`.
+3. The maximum number of `<out type="loadBalance">` tags is `48`.
+
+If attribute `type` is `fastFailover`, there is couple limits:
+
+1. Cannot use [`<output>`](Element/run/output.md) tag as an output, which mean: O1, O2 is an invalid output port in this situation.
+
+<h5>&lt;out&gt; Tag Example</h5>
+
+```
+<out>P1, P5, P10-15, P20_1, P20_2, P24_all, O1, O3, O5-7</out>
+```
 
 <h4>&lt;next&gt; Tag Example</h4>
 
 ```
 <in>P1</in>
-<fid>F1</fid>
 <next>
-    <fid>F2</fid>
+    <fid>F1</fid>
     <out>P2</out>
 </next>
-<next type="notmatch">
-    <fid>F3</fid>
+<next>
+    <fid>F2</fid>
     <out>P3</out>
 </next>
 ```
@@ -116,8 +120,10 @@ P1 -> F1 -> P2
 
 <chain>
     <in>P1</in>
-    <fid>F1</fid>
-    <out>P2</out>
+    <next>
+        <fid>F1</fid>
+        <out>P2</out>
+    </next>
 </chain>
 
 </regular>
@@ -131,7 +137,7 @@ P1 -> F1 -> P2
 
 ```
 P1 -> F1 ↴
-         -> F2 -> P2
+         -> P2
          !> P3
 ```
 
@@ -150,22 +156,13 @@ P1 -> F1 ↴
 </or>
 </filter>
 
-<filter id="2">
-<or>
-
-...
-
-</or>
-</filter>
-
 <chain>
     <in>P1</in>
-    <fid>F1</fid>
     <next>
-        <fid>F2</fid>
+        <fid>F1</fid>
         <out>P2</out>
     </next>
-    <next type="notmatch">
+    <next>
         <out>P3</out>
     </next>
 </chain>
@@ -180,9 +177,9 @@ P1 -> F1 ↴
 <h3>Chart</h3>
 
 ```
-P1 -> F1 ↴
-         -> F2 -> P2
-               !> O1
+P1 -> F1 -> P2
+    ↳ F2 -> P3
+   !> O1
 ```
 
 <h3>Task</h3>
@@ -216,13 +213,16 @@ P1 -> F1 ↴
 
 <chain>
     <in>P1</in>
-    <fid>F1</fid>
+    <next>
+        <fid>F1</fid>
+        <out>P2</out>
+    </next>
     <next>
         <fid>F2</fid>
-        <out>P2</out>
-        <next type="notmatch">
-            <out>O1</out>
-        </next>
+        <out>P3</out>
+    </next>
+    <next>
+        <out>O1</out>
     </next>
 </chain>
 
