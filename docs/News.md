@@ -1,6 +1,10 @@
 News
 =========
 
+<h2>2021/09/05</h2>
+
+* [`<out>`](Element/run/regular/chain.md): `type` attribute `fastFailover` aceept `<output>` tag type output.
+
 <h2>2021/09/04</h2>
 
 * [`<chain>`](Element/run/regular/chain.md): redefine `<next>` tag behavior.

@@ -71,10 +71,6 @@ If attribute `type` is `loadBalance`, there is couple limits:
 2. The maximum number of member ports is `8`.
 3. The maximum number of `<out type="loadBalance">` tags is `48`.
 
-If attribute `type` is `fastFailover`, there is couple limits:
-
-1. Cannot use [`<output>`](Element/run/output.md) tag as an output, which mean: O1, O2 is an invalid output port in this situation.
-
 <h5>&lt;out&gt; Tag Example</h5>
 
 ```
