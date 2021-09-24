@@ -70,6 +70,41 @@ If attribute `type` is `loadBalance`, there is couple limits:
 1. Cannot use [`<output>`](Element/run/output.md) tag as an output, which mean: O1, O2 is an invalid output port in this situation.
 2. The maximum number of member ports is `8`.
 3. The maximum number of `<out type="loadBalance">` tags is `48`.
+4. Physical output port cannot be duplicated. Take an example:
+
+```
+<run>
+
+<output id="1">
+    <port>P2</port>
+    <QinQ>100</QinQ>
+</output>
+
+<output id="2">
+    <port>P2</port>
+    <QinQ>101</QinQ>
+</output>
+
+<regular>
+<chain>
+    <in>P1</in>
+    <next>
+        <out>P2, O1</out>
+    </next>
+</chain>
+
+<chain>
+    <in>P1</in>
+    <next>
+        <out>O1, O2</out>
+    </next>
+</chain>
+</regular>
+
+</run>
+```
+
+All of above chains are invalid. `P2, O1` physical output port are `P2`, and `O1, O2` are `P2` too.
 
 <h5>&lt;out&gt; Tag Example</h5>
 
