@@ -15,6 +15,7 @@
 			* [SSLi Service Chain with Array](Element/run/macros/ssli_service_chain_with_array.md)
 			* [EN-DC](Element/run/macros/en_dc.md)
 			* [Link State](Element/run/macros/link_state.md)
+			* [FEC](Element/run/macros/fec.md)
 * [RestAPI](RestAPI.md)
 	* [Submit](RestAPI/Submit.md)
 	* [Patch](RestAPI/Patch.md)

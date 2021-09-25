@@ -17,3 +17,4 @@ As you knew, the task is written in XML format, here is our element tags:
 		* [`<ssli_service_chain_with_array>`](Element/run/macros/ssli_service_chain_with_array.md)
 		* [`<en_dc>`](Element/run/macros/en_dc.md)
 		* [`<link_state>`](Element/run/macros/link_state.md)
+		* [`<fec>`](Element/run/macros/fec.md)

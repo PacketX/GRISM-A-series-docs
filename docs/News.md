@@ -4,6 +4,7 @@ News
 <h2>2021/09/25</h2>
 
 * [`<output>`](Element/run/output.md): update the limitation of `<QinQ>` tag.
+* [`<macros>`](Element/run/macros.md): add [`<fec>`](Element/run/macros/fec.md) tag for [`FEC`](Element/run/macros/fec.md).
 
 <h2>2021/09/24</h2>
 
