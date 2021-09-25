@@ -1,6 +1,10 @@
 News
 =========
 
+<h2>2021/09/25</h2>
+
+* [`<output>`](Element/run/output.md): update the limitation of `<QinQ>` tag.
+
 <h2>2021/09/24</h2>
 
 * [`<chain>`](Element/run/regular/chain.md): `<out>` tag added one limit.

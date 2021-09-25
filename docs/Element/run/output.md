@@ -47,10 +47,7 @@ Output
 
 <h4>&lt;QinQ&gt; Limits</h4>
 
-1. `<QinQ>` tag only can be used twice in one `<output>` tag.
-2. Able to identify two tags only.
-3. If a packet already tagged with one vlan (tag0) and do push vlan twice (tagA, tagB), output packet is tagged with two vlans (tag0, tagB).
-4. If a packet tagged with more than one vlan (outter is tag0) and do push vlan twice (tagA, tagB), output packet is tagged with vlans (tag0 and other tag of original packet, tagB).
+1. `<QinQ>` tag only can be used once in one `<output>` tag.
 
 <h2>Example 1</h2>
 
