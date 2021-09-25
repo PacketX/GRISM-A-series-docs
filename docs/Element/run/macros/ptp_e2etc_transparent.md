@@ -11,9 +11,9 @@ Enable the `PTP` `E2ETC` function on interfaces and  forward the `PTP` packets d
 
 **Once configured ports, it needs to add chains(or other datapath) to forward packets.**
 
-<h3>&lt;port&gt; Tag</h3>
+<h3>&lt;ports&gt; Tag</h3>
 
-`<port>` tag described what physical ports to transparent PTP packets. Port number start with prefix `P` and port number can be formatted as range. Multiple ports separated by `, `. Breakout port has suffix `_1` to `_4`, `_all` as all sub-ports.
+`<ports>` tag described what physical ports to transparent PTP packets. Port number start with prefix `P` and port number can be formatted as range. Multiple ports separated by `, `. Breakout port has suffix `_1` to `_4`, `_all` as all sub-ports.
 
 <h2>Example</h2>
 
