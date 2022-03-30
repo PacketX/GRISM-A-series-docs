@@ -1,6 +1,10 @@
 News
 =========
 
+<h2>2022/03/30</h2>
+
+* [`<macros>`](Element/run/macros.md): add `<ngap_ports>` tag and `<ngap_extra_ports>` tag in [`<mec>`](Element/run/macros/mec.md) tag.
+
 <h2>2021/09/25</h2>
 
 * [`<output>`](Element/run/output.md): update the limitation of `<QinQ>` tag.
