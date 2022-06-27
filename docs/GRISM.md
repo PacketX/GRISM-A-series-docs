@@ -28,8 +28,10 @@ This is an example for filter out `udp port 53`.
 
 <chain>
     <in>P1</in>
-    <fid>F1</fid>
-    <out>P2</out>
+    <next>
+        <fid>F1</fid>
+        <out>P2</out>
+    </next>
 </chain>
 
 </regular>
